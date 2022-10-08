@@ -1,0 +1,48 @@
+spring:
+  datasource:
+    url: jdbc:mysql://121.37.92.215/online_education
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 3
+      idle-timeout: 10000
+      maximum-pool-size: 10
+      max-lifetime:  60000   #不能小于30秒，否则默认回到1800秒
+  servlet:
+    multipart: 
+      max-file-size: 256MB
+      max-request-size: 512MB
+  mvc:
+    static-path-pattern: ${visit-file-path}** 
+  resources:
+    static-locations: file:${upload-file-path}
+  redis:
+    host: 121.37.92.215
+    port: 6379
+    password: 123456
+  jackson:
+    locale: zh
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8    # 设置全局时区
+server:
+  port: 8088
+jwt:
+  secret-key: jwt key demo
+  validity-in-minutes: 14400000
+constraint:
+  username: .{4,20}
+  password: .{8,20}
+password:
+  encode:
+    secret-key: password encoder demo
+aliyun:
+  vod:
+    file: 
+      keyid: LTAI5tDL65y6zDgjJ1Ckk8FM
+      keysecret: 1ZEEwTGFxdiM9zOnEwCN2mOp4QslVe
+    region: cn-shanghai
+upload-file-path: C:\Users\p'l'l\Desktop\uploadPicture
+visit-file-path: /resource/
+cache:
+  time-to-live-seconds: 10

@@ -1,0 +1,79 @@
+import Mock from 'mockjs'
+
+export default Mock.mock('/firstDomain', 'get', (options) => {
+    return {
+        status: 200,
+        message: '请求列表成功！',
+        data: [
+            {
+                id:'1',
+                name:'test',
+            },
+            {
+                id:'2',
+                name:'test2',
+            },
+            {
+                id:'3',
+                name:'test3',
+            }
+            ,
+            {
+                id:'4',
+                name:'test4',
+            }
+            ,
+            {
+                id:'5',
+                name:'test5',
+            }
+            ,
+            {
+                id:'6',
+                name:'test6',
+            },
+            {
+                id:'4',
+                name:'test4',
+            }
+            ,
+            {
+                id:'5',
+                name:'test5',
+            }
+            ,
+            {
+                id:'6',
+                name:'test6',
+            },
+            {
+                id:'4',
+                name:'test4',
+            }
+            ,
+            {
+                id:'5',
+                name:'test5',
+            }
+            ,
+            {
+                id:'6',
+                name:'test6',
+            },
+            {
+                id:'4',
+                name:'test4',
+            }
+            ,
+            {
+                id:'5',
+                name:'test5',
+            }
+            ,
+            {
+                id:'6',
+                name:'test6',
+            }
+        ]
+    }
+})
